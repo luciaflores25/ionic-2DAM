@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar text-center color='dark'>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Ejercicio 6</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label position='stacked'>
+            <h2>Euros</h2>
+        </ion-label>
+        <ion-input [(ngModel)]='eur' (keyup)='eurToPts()' type='number'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position='stacked'>
+            <h2>Pesetas</h2>
+        </ion-label>
+        <ion-input [(ngModel)]='pts' (keyup)='ptsToEur()' type='number'></ion-input>
+    </ion-item>
+
+</ion-content>

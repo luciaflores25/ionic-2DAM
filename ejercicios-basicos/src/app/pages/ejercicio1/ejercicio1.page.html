@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar text-center color='dark'>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Ejercicio 1</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-button (click)='showName()' color='primary' expand='full'>
+                    Mostrar nombre
+                </ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-button (click)='clearName()' color='warning' expand='full'>
+                    Borrar nombre
+                </ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <h2 text-center>{{ name }}</h2>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
