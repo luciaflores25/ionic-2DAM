@@ -8,16 +8,15 @@ import { STUDENTS } from '../model/students';
 })
 export class HomePage {
 
-  //Importamos la constante de estudiantes
   students = STUDENTS;
   name: string;
-  image:string;
+  image: string;
 
   constructor() {}
 
-  randomStudent(){
-    const n = Math.floor(Math.random() * 20); //Math.floor quita los decimales
+  randomStudent() {
+    const n = Math.floor(Math.random() * 20);
     this.name = this.students[n];
-    this.image = `../assets/img/foto${n+1}.png`
+    this.image = `../assets/img/foto${n + 1}.png`;
   }
 }
