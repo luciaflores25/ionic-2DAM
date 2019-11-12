@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Ejercicio 1</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label position='stacked'>Mínimo</ion-label>
+        <ion-input [(ngModel)]='min' type='number'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position='stacked'>Máximo</ion-label>
+        <ion-input [(ngModel)]="max" type='number'></ion-input>
+    </ion-item>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-button *ngIf="max >= min" size='large' expand='full' color="tertiary" (click)='generate()'>
+                    Generar
+                </ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <h3 text-center><strong (click)="maxMin()">{{ value }}</strong></h3>
+                <h3 text-center *ngIf="value == min && temp == 2"><strong>es el número mínimo</strong></h3>
+                <h3 text-center *ngIf="value == max && temp == 1"><strong>es el número máximo</strong></h3>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
